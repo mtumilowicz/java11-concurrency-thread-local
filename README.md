@@ -1,7 +1,7 @@
 # thread-local
 The main goal of this project is to show basic features of `ThreadLocal`.
 
-_Reference_: 
+_Reference_: https://docs.oracle.com/javase/7/docs/api/java/lang/ThreadLocal.html
 
 # preface
 **ThreadLocal** - each thread has its own, independently initialized copy of the 
@@ -27,7 +27,7 @@ references to these copies exist).
 * `Main`, `ThreadIdTest` - showcase
 
 # tests
-* if tasks are done by one thread, id should be the same (`ids_same_oneThread`):
+* if tasks are done by one thread, ids should be the same (`ids_same_oneThread`):
     ```
     ExecutorService executorService = Executors.newFixedThreadPool(1);
     
