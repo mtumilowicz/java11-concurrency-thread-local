@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/mtumilowicz/thread-local.svg?branch=master)](https://travis-ci.com/mtumilowicz/thread-local)
+
 # thread-local
 The main goal of this project is to show basic features of `ThreadLocal`.
 
