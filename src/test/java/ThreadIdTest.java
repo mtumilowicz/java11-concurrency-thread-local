@@ -17,7 +17,7 @@ import static org.junit.Assert.assertThat;
 public class ThreadIdTest {
 
     @Test
-    public void id() throws ExecutionException, InterruptedException {
+    public void ids_array_has_same_values() throws ExecutionException, InterruptedException {
         MyCallable sharedCallableInstance = new MyCallable();
 
         ExecutorService executorService = Executors.newCachedThreadPool();
@@ -55,7 +55,7 @@ public class ThreadIdTest {
     }
 
     @Test
-    public void ids_difference_oneThread() throws ExecutionException, InterruptedException {
+    public void ids_same_oneThread() throws ExecutionException, InterruptedException {
         MyCallable sharedCallableInstance = new MyCallable();
 
         ExecutorService executorService = Executors.newFixedThreadPool(1);
