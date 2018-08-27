@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         MyCallable sharedCallableInstance = new MyCallable();
 
-        ExecutorService executorService = Executors.newCachedThreadPool();
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
 
         List<Future<int[]>> futures = executorService.invokeAll(Arrays.asList(
                 sharedCallableInstance, 
