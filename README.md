@@ -27,7 +27,7 @@ references to these copies exist).
 * `Main`, `ThreadIdTest` - showcase
 
 # tests
-* if tasks are done by one thread, ids should be the same (`ids_same_oneThread`):
+* if tasks are done by one thread, ids should be the same (`ids_same_oneThread`)
     ```
     ExecutorService executorService = Executors.newFixedThreadPool(1);
     
