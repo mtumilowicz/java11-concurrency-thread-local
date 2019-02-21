@@ -3,7 +3,8 @@
 # java11-concurrency-thread-local
 The main goal of this project is to show basic features of `ThreadLocal`.
 
-_Reference_: https://docs.oracle.com/javase/7/docs/api/java/lang/ThreadLocal.html
+_Reference_: https://docs.oracle.com/javase/7/docs/api/java/lang/ThreadLocal.html  
+_Reference_: https://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601
 
 # preface
 **ThreadLocal** - each thread has its own, independently initialized copy of the 
@@ -16,6 +17,17 @@ thread-local variable as long as the thread is alive and the `ThreadLocal`
 instance is accessible; after a thread goes away, all of its copies of 
 thread-local instances are subject to garbage collection (unless other 
 references to these copies exist).
+
+* Conceptually, you can think of a `ThreadLocal<T>` as holding 
+a `Map<Thread,T>` that stores the thread-specific values, though this is not how it is actually implemented.
+* The thread-specific values are stored in the `Thread` object itself; when the thread terminates, the
+thread-specific values can be garbage collected.
+* `@Transational` in Spring (or in general - transaction management) is a good example of using `ThreadLocal` as
+the entity manager and the connection are both bound to the current thread using `ThreadLocal` variables - 
+This is convenient in that it reduces the need to pass execution context information into every method.
+* Like global variables, thread-local variables can detract from reusability
+  and introduce hidden couplings among classes, and should therefore be used
+  with care.
 
 # project description
 * `ThreadId` assigns id to thread.
