@@ -25,9 +25,8 @@ thread-specific values can be garbage collected.
 * `@Transational` in Spring (or in general - transaction management) is a good example of using `ThreadLocal` as
 the entity manager and the connection are both bound to the current thread using `ThreadLocal` variables - 
 This is convenient in that it reduces the need to pass execution context information into every method.
-* Like global variables, thread-local variables can detract from reusability
-  and introduce hidden couplings among classes, and should therefore be used
-  with care.
+* Like global variables, thread-local variables can detract from reusability and introduce hidden couplings 
+among classes, and should therefore be used with care.
 
 # project description
 * `ThreadId` assigns id to thread.
