@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.com/mtumilowicz/thread-local.svg?branch=master)](https://travis-ci.com/mtumilowicz/thread-local)
+[![Build Status](https://travis-ci.com/mtumilowicz/java11-concurrency-thread-local.svg?branch=master)](https://travis-ci.com/mtumilowicz/java11-concurrency-thread-local)
 
-# thread-local
+# java11-concurrency-thread-local
 The main goal of this project is to show basic features of `ThreadLocal`.
 
 _Reference_: https://docs.oracle.com/javase/7/docs/api/java/lang/ThreadLocal.html
